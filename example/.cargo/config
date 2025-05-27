@@ -1,0 +1,24 @@
+[target.riscv32imac-unknown-none-elf]
+rustflags = [
+  "--emit","asm",
+  "-C", "link-arg=-Tmemory.x",
+  "-C", "link-arg=-Tlink.x",
+
+  # TODO only show warnigns when there are no errors, or errors below warnings
+  "-A","warnings"
+
+
+  # The following option can decrease the code size significantly.  We don't
+  # have it enabled by default as it gets rid of panic information we do want
+  # to have those when developing code.
+  # "-C", "force-frame-pointers=no",
+]
+
+
+[build]
+target = "riscv32imac-unknown-none-elf"
+
+
+[env]
+
+LITEX_SOC_HEADERS_FILE="../../build/sim/soc_headers.rs"

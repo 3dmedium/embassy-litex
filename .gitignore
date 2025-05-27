@@ -1,0 +1,4 @@
+build/
+example/target/
+example/app.bin
+gtkwave/

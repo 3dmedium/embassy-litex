@@ -1,0 +1,1 @@
+python3 sim.py  --cpu-type=vexriscv --cpu-variant=imac --integrated-sram-siz=0x20000 --integrated-rom-size=0x20000 --with-sdram --sdram-init=./example/app.bin

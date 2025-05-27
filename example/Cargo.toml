@@ -1,0 +1,55 @@
+[package]
+name = "example-litex"
+version = "0.1.0"
+edition = "2021"
+
+
+
+
+[features]
+
+
+
+[dependencies]
+embassy-litex = { version = "0.1.0", path = "../embassy-litex" }
+embassy-litex-macros = { version = "0.1.0", path = "../embassy-litex-macros" }
+
+embassy-time = { version = "0.4.0"}
+embassy-executor = { version = "0.7.0",  features = ["task-arena-size-524288"] }
+
+embassy-futures = { version = "0.1.0" }
+
+critical-section = "1.1.0"
+embedded-alloc = "0.6.0"
+riscv = { path="../ext/riscv/riscv", features = ["critical-section-single-hart"] }
+riscv-rt = { path="../ext/riscv/riscv-rt" , features = ["single-hart"] }
+
+
+static_cell = "2.1"
+
+
+embedded-io-async = "0.6.1"
+log = "0.4.27"
+
+
+[dev-dependencies]
+
+
+
+
+
+[profile.release]
+debug = true
+lto = true
+opt-level = 3
+strip = "debuginfo"
+overflow-checks = false
+
+[profile.dev]
+debug = true
+opt-level = 1
+
+
+
+
+

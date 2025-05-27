@@ -1,0 +1,13 @@
+
+{
+    "rust-analyzer.linkedProjects": [
+        "./example/Cargo.toml"
+    ],
+    "rust-analyzer.check.extraEnv": {
+        "LITEX_SOC_HEADERS_FILE":"../../build/sim/soc_headers.rs"
+    },
+    "rust-analyzer.cargo.extraEnv": {
+        "LITEX_SOC_HEADERS_FILE":"../../build/sim/soc_headers.rs"
+    },
+    "idf.pythonInstallPath": "/usr/bin/python3"
+}
